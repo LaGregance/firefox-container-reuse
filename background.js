@@ -2,6 +2,8 @@ const NO_CONTAINER = "firefox-default";
 const DEFAULT_CONTAINER_NAME = "firefox-container-2";
 const ACTIVE_CONTAINER_KEY = "CONTAINER_REUSE_ACTIVE";
 
+// TODO: Default doesn't work as tabs onCreated doesn't work
+
 async function getActiveContainer() {
     const result = await browser.storage.local.get({ [ACTIVE_CONTAINER_KEY]: NO_CONTAINER })
     return result[ACTIVE_CONTAINER_KEY];
@@ -19,8 +21,6 @@ browser.tabs.onActivated.addListener(async (event) => {
 browser.tabs.onCreated.addListener(async (tab) => {
     const activeContainer = await getActiveContainer();
 
-    console.log('cookieStoreId = ', tab.cookieStoreId);
-    console.log('activeContainer = ', activeContainer);
     if (activeContainer != NO_CONTAINER && tab.cookieStoreId == NO_CONTAINER) {
         // Re-create the tab in the good container
         browser.tabs.create({
