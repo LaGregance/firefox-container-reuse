@@ -1,7 +1,12 @@
 {
     "addons": {
       "{e5ae7018-948b-48eb-80a6-8f83a855a7d5}": {
-        "updates": []
+        "updates": [
+          {
+            "version": "1.1",
+            "update_link": "https://raw.githubusercontent.com/LaGregance/firefox-container-reuse/refs/heads/main/web-ext-artifacts/container_reuse_prerelease-1.1.xpi"
+          }
+        ]
       }
     }
   }

@@ -1,14 +1,15 @@
 {
     "manifest_version": 2,
     "name": "Container Reuse",
-    "version": "1.0",
+    "version": "1.1",
     "description": "Open new tab in the current container",
     "icons": {
       "48": "icons/icon-48.png"
     },
     "permissions": [
         "contextualIdentities",
-        "cookies"
+        "cookies",
+        "storage"
     ],
     "background": {
         "scripts": ["background.js"],
