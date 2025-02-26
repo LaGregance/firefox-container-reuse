@@ -5,6 +5,10 @@
           {
             "version": "1.1",
             "update_link": "https://raw.githubusercontent.com/LaGregance/firefox-container-reuse/refs/heads/main/web-ext-artifacts/container_reuse_prerelease-1.1.xpi"
+          },
+          {
+            "version": "1.2",
+            "update_link": "https://raw.githubusercontent.com/LaGregance/firefox-container-reuse/refs/heads/main/web-ext-artifacts/container_reuse_prerelease-1.2.xpi"
           }
         ]
       }
